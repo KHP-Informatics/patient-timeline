@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Swipebox test</title>
+  <script src="/static/swipebox/lib/jquery-2.1.0.min.js"></script>
+  <script src="/static/swipebox/src/js/jquery.swipebox.js"></script>
+  <link rel="stylesheet" href="/static/swipebox/src/css/swipebox.css">
+
+
+
+</head>
+<body>
+
+<a href="/static/files/child.jpg" class="swipebox" title="Title">
+<img height="100" src="/static/files/child.jpg" alt="image">
+</a>
+<a href="/static/files/child.jpg" class="swipebox" title="Title">
+<img height="100" src="/static/files/child.jpg" alt="image">
+</a>
+<a href="/static/files/child.jpg" class="swipebox" title="Title">
+<img height="100" src="/static/files/child.jpg" alt="image">
+</a>
+
+<script type="text/javascript">
+;( function( $ ) {
+
+	$( '.swipebox' ).swipebox();
+
+} )( jQuery );
+</script>
+</body>
+</html>
