@@ -1,69 +1,87 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Patient Record Timeline</title>
-	<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="css/responsive.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="inc/colorbox.css" type="text/css" media="screen">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Patient Record Timeline</title>
+  <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/responsive.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="inc/colorbox.css" type="text/css" media="screen">
 </head>
 <body>
-	<div class="container">
-	  <h1>Patient Record Timeline</h1>
+<div class="container">
+  <h1>Patient Record Timeline</h1>
 
-      <p>Browse by date for current patient:</p>
+  <p>Browse by date for current patient:</p>
 
-		<div id="timelineContainer" class="timelineContainer">
-			<div class="timelineToggle"><p><a class="expandAll">+ expand all</a></p></div>
-			<br class="clear">
-		</div>
+  <div id="timelineContainer" class="timelineContainer">
+    <div class="timelineToggle"><p><a class="expandAll">+ expand all</a></p></div>
+    <br class="clear">
+  </div>
 
-		<br>
-		<br>
-	</div>
+  <br>
+  <br>
+</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script type="text/javascript" src="inc/colorbox.js"></script>
-	<script type="text/javascript" src="js/timeliner.min.js"></script>
-	<script>
-		$(document).ready(function() {
-          $.ajax({
-                   url: 'http://localhost:5000/patient/1/',
-                   type: "GET",
-                   dataType: "json",
-                   success: function (data) {
-//                     var json = JSON.parse(data);
-                     for(var i = 0; i < data.length; i++) {
-                       var obj = data[i];
-                       var date = new Date(obj['date']);
-                       $('#timelineContainer').append("<div class='timelineMajor'>"+
-                       "<h2 class='timelineMajorMarker'><span>"+date.toLocaleDateString()+"</span></h2>");
-                       for(var j = 0; j < obj['element'].length; j++) {
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="inc/colorbox.js"></script>
+<script type="text/javascript" src="js/timeliner.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $.ajax({
+             url: 'http://localhost:5000/patient/1/',
+             type: "GET",
+             dataType: "json",
+             success: function (data) {
 
-                         var elementObj = obj['element'][j];
-                         $('#timelineContainer').append("<dl class='timelineMinor'>"+
-                                                        "<dt id='"+elementObj['id']+"'><a>"+elementObj['title']+"</a></dt>" +
-                                                        "<dd class='timelineEvent' id='"+elementObj['id']+"EX' style='display:none;'>"+
-                                                       // "<h3>"+elementObj['title']+"</h3>"+
-                                                        "<p>"+elementObj['desc']+"</p>"+
-                                                        "<p>"+elementObj['text']+"</p>"+
-                                                        "<p><a href='"+elementObj['file']+"'>Associated File</a></p>"+
-                                                        "<p><br/><small>Updated: "+elementObj['updated']+"</small></p>"+
-                                                        "<br class='clear'>"+
-                                                        "</dd></dl>");
-                       }
-                       $('#timelineContainer').append("</div>");
-                     }
-                     $('#timelineContainer').append("<br class='clear'>");
+               for (var i = 0; i < data.length; i++) {
+                 var obj = data[i];
+                 var date = new Date(obj['date']);
+                 $('#timelineContainer').append("<div class='timelineMajor'>" +
+                                                "<h2 class='timelineMajorMarker'><span>" + date.toLocaleDateString() + "</span></h2>");
+
+                 for (var j = 0; j < obj['element'].length; j++) {
+
+                   var elementObj = obj['element'][j];
+
+                   var textField = elementObj['text'];
+                   if (typeof textField == "undefined") {
+                     textField = '';
                    }
-                 });
 
-			$.timeliner({
-			});
+                   var fileLink = "<p><a href='" + elementObj['file'] + "'>Download File</a></p>";
+                   if (typeof elementObj['file'] == "undefined") {
+                     fileLink = '';
+                   }
 
-			$(".CBmodal").colorbox({inline:true, initialWidth:100, maxWidth:682, initialHeight:100, transition:"elastic",speed:750});
-		});
-	</script>
+                   var updateText = "<p><br/><small>Updated: " + elementObj['updated'] + "</small></p>";
+                   if (typeof elementObj['updated'] == "undefined") {
+                     updateText = '';
+                   }
+
+
+                   $('#timelineContainer').append("<dl class='timelineMinor'>" +
+                                                  "<dt id='" + elementObj['id'] + "'><a>" + elementObj['title'] + "</a></dt>" +
+                                                  "<dd class='timelineEvent' id='" + elementObj['id'] + "EX' style='display:none;'>" +
+                                                    // "<h3>"+elementObj['title']+"</h3>"+
+                                                  "<p>" + elementObj['desc'] + "</p>" +
+                                                  "<p>" + textField + "</p>" +
+                                                  fileLink +
+                                                  updateText +
+                                                  "<br class='clear'>" +
+                                                  "</dd></dl>");
+                 }
+                 $('#timelineContainer').append("</div>");
+               }
+               $('#timelineContainer').append("<br class='clear'>");
+             }
+           });
+
+    $.timeliner({
+                });
+
+    $(".CBmodal").colorbox({inline: true, initialWidth: 100, maxWidth: 682, initialHeight: 100, transition: "elastic", speed: 750});
+  });
+</script>
 
 </body>
 </html>
