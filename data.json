@@ -21,7 +21,7 @@
         "id": "12345678901236",
         "patient_id": 1,
         "title": "child.jpg",
-        "desc": "A photo of a child",
+        "desc": "A photo of a child\n\nOur Ref: AB/12345.1 23 December 2004 Mr Jones Some Road Somewhere Dear Mr Someone - I understand from Mr Jones of Some School, that you have concerns regarding Herman I would like to offer you an appointment on Friday 28th January 2005 at 9am For teh appointment it would be useful to meet all those family members living at home so that we can hear everyone's point of view. n attending this appointment if travelling by car please can you give yourselves extra time as parking is difficult around the local area If you are unable to attend clinic, on receipt of this letter, please contact us on the above telephone number.;;;;I enclose a leaflet with information and directions to the centre, which I hope you will find helpful. If you have any queries, please do not hesitate to get in touch Yours Bob Smith.",
         "date": "2014-09-11",
         "file": "files/child.jpg"
     },
@@ -63,7 +63,7 @@
         "id": "12345678901236",
         "patient_id": 2,
         "title": "child.jpg",
-        "desc": "A photo of a child",
+        "desc": "A photo of a child\n Our Ref: AB/12345.1 23 December 2004 Mr Jones Some Road Somewhere Dear Mr Someone - I understand from Mr Jones of Some School, that you have concerns regarding Herman I would like to offer you an appointment on Friday 28th January 2005 at 9am For teh appointment it would be useful to meet all those family members living at home so that we can hear everyone's point of view. n attending this appointment if travelling by car please can you give yourselves extra time as parking is difficult around the local area If you are unable to attend clinic, on receipt of this letter, please contact us on the above telephone number.;;;;I enclose a leaflet with information and directions to the centre, which I hope you will find helpful. If you have any queries, please do not hesitate to get in touch Yours Bob Smith.",
         "date": "2014-09-11",
         "file": "files/child.jpg"
     },
