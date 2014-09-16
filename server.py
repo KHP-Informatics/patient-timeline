@@ -7,20 +7,26 @@ api = restful.Api(app)
 
 database = json.load(open('data.json'))
 
-def reindex(data=database, key='patient_id'):
+def reindex(data=database, key='patient_id', primary_key=True):
     """
     Given the database index first by id then by data for use by the frontend
     :return:
     """
-    indexed = {}
+    if primary_key:
+        indexed = {}
+    else:
+        indexed = []
 
     for record in data:
         record = dict(record)
 
-        if record[key] not in indexed.keys():
-            indexed[record[key]] = []
+        if primary_key:
+            if record[key] not in indexed.keys():
+                indexed[record[key]] = []
 
-        indexed[record[key]].append({'date': record['date'], "element": record})
+            indexed[record[key]].append({'date': record['date'], "element": record})
+        else:
+            indexed.append({'date': record['date'], "element": record})
 
     # sort the records by date
     # for subject in indexed:
@@ -58,7 +64,7 @@ class PatientID(restful.Resource):
             if int(record['patient_id']) == patient_id:
                 response.append(record)
 
-        return json.dumps(reindex(response, 'date'))
+        return json.dumps(reindex(response, 'date', True))
 
 # API endpoints
 api.add_resource(PatientRecords, '/')
