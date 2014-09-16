@@ -24,9 +24,9 @@ def reindex(data=database, key='patient_id', primary_key=True):
             if record[key] not in indexed.keys():
                 indexed[record[key]] = []
 
-            indexed[record[key]].append({'date': record['date'], "element": record})
+            indexed[record[key]].append({'date': record['date'], "element": [record]}) # hack this should be all records!
         else:
-            indexed.append({'date': record['date'], "element": record})
+            indexed.append({'date': record['date'], "element": [record]})
 
     # sort the records by date
     # for subject in indexed:
@@ -64,7 +64,7 @@ class PatientID(restful.Resource):
             if int(record['patient_id']) == patient_id:
                 response.append(record)
 
-        return json.dumps(reindex(response, 'date', True))
+        return reindex(response, 'date', False)
 
 # API endpoints
 api.add_resource(PatientRecords, '/')
