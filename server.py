@@ -58,7 +58,7 @@ class PatientID(restful.Resource):
             if int(record['patient_id']) == patient_id:
                 response.append(record)
 
-        return json.dumps(reindex(response))
+        return json.dumps(reindex(response, 'date'))
 
 # API endpoints
 api.add_resource(PatientRecords, '/')
