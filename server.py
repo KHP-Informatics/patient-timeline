@@ -1,6 +1,6 @@
 from flask import Flask
 from flask.ext import restful
-import json
+import json, datetime
 
 app = Flask(__name__)
 api = restful.Api(app)
@@ -21,6 +21,18 @@ def reindex(data=database, key='patient_id'):
             indexed[record[key]] = []
 
         indexed[record[key]].append({'date': record['date'], "element": record})
+
+    # sort the records by date
+    # for subject in indexed:
+    #     sorted_entries = []
+    #
+    #     for record in subject:
+    #         record = sorted(record, key=lambda k: k['date'])
+    #         sorted_entries.append(record)
+    #
+    #     sorted_indexed[subject] = sorted_indexed
+    #
+    # indexed = sorted_indexed
 
     return indexed
 
@@ -46,7 +58,7 @@ class PatientID(restful.Resource):
             if int(record['patient_id']) == patient_id:
                 response.append(record)
 
-        return json.dumps(response)
+        return json.dumps(reindex(response))
 
 # API endpoints
 api.add_resource(PatientRecords, '/')
