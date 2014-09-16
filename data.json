@@ -1,9 +1,15 @@
 [
     {
+     "date": "2014-09-16",
+     "title": "John Smith",
+     "description": "John came to see Dr. Cane presenting with a rash. Sent home with a topical cream"
+    },
+   
+    {
      "id":  "12345678901234",
      "title": "ccscorrespondence.doc",
      "desc": "Signed By:\nBob Smith",
-     "text": "Our Ref: AB/12345 9th November 2004\n\n\nMike Jones\n\nHeadteacher\n\nSome School\n\nSomwhere\n\nDear Mr Jones\n\nRe Herman Patient - D.o.B 1st Jan, 1973. Thank you for the referral of the above familly to the Child and Family Therapy Centre\n\nThe case will be discussed at a Referral Meeting and you will be advised whether teh family is to be seen within the near future or placed on the Waiting List, or if any other action is proposed,\n\nYour sincerely\n\nBob Smith.",
+     "text": " Our Ref: AB/12345 9th November 2004\n\n\nMike Jones\n\nHeadteacher\n\nSome School\n\nSomwhere\n\nDear Mr Jones\n\nRe Herman Patient - D.o.B 1st Jan, 1973. Thank you for the referral of the above familly to the Child and Family Therapy Centre\n\nThe case will be discussed at a Referral Meeting and you will be advised whether teh family is to be seen within the near future or placed on the Waiting List, or if any other action is proposed,\n\nYour sincerely\n\nBob Smith.",
      "date": "2009-11-28",
      "updated": "2009-11-28"
     },
@@ -21,5 +27,20 @@
      "desc":  "A photo of a child",
      "date":  "2014-09-11",
      "file":  "files/child.jpg"
+    },
+    {
+     "id": "12345678901237",
+     "title": "cris.pdf",
+     "desc": "The South London and Maudsley NHS Foundation Trust Biomedical Research Centre (SLAM BRC) case register: development and descriptive data",
+     "file": "files/cris.pdf",
+     "date": "2009-08-12"
+    },
+    {
+      "id": "12345678901238",
+      "title": "cris_deident.pdf",
+      "desc": "Development and evaluation of a de-identification procedure for a case register sourced from mental health electronic records.",
+       "file": "files/cris_deident.pdf",
+       "date": "2013-07-13"
     }
+
 ]
