@@ -1,25 +1,19 @@
 [
     {
-     "date": "2014-09-16",
-     "title": "John Smith",
-     "description": "John came to see Dr. Cane presenting with a rash. Sent home with a topical cream"
-    },
-   
-    {
-     "id":  "12345678901234"
+     "id":  "12345678901234",
      "title": "ccscorrespondence.doc",
      "desc": "Signed By:\nBob Smith",
-     "text: " Our Ref: AB/12345 9th November 2004\n\n\nMike Jones\n\nHeadteacher\n\nSome School\n\nSomwhere\n\nDear Mr Jones\n\nRe Herman Patient - D.o.B 1st Jan, 1973. Thank you for the referral of the above familly to the Child and Family Therapy Centre\n\nThe case will be discussed at a Referral Meeting and you will be advised whether teh family is to be seen within the near future or placed on the Waiting List, or if any other action is proposed,\n\nYour sincerely\n\nBob Smith.",
-      "date": "2009-11-28",
-      "updated": "2009-11-28"
+     "text": "Our Ref: AB/12345 9th November 2004\n\n\nMike Jones\n\nHeadteacher\n\nSome School\n\nSomwhere\n\nDear Mr Jones\n\nRe Herman Patient - D.o.B 1st Jan, 1973. Thank you for the referral of the above familly to the Child and Family Therapy Centre\n\nThe case will be discussed at a Referral Meeting and you will be advised whether teh family is to be seen within the near future or placed on the Waiting List, or if any other action is proposed,\n\nYour sincerely\n\nBob Smith.",
+     "date": "2009-11-28",
+     "updated": "2009-11-28"
     },
     {
-     "id":  "12345678901235"
+     "id":  "12345678901235",
      "title": "ccscorrespondence.doc",
      "desc": "Signed By:\nBob Smith",
      "text": "Our Ref: AB/12345.1 23 December 2004 Mr Jones  Some Road\nSomewhere \n\nDear Mr Someone  - I understand from Mr Jones of Some School, that you have concerns regarding Herman \n\nI would like to offer you an appointment on Friday 28th January 2005 at 9am\n\nFor teh appointment it would be useful to meet all those family members living at home so that we can hear everyone's point of view.\n\nn attending this appointment if travelling by car please can you give yourselves extra time as parking is difficult around the local area\n\nIf you are unable to attend clinic, on receipt of this letter, please contact us on the above telephone number.;;;;I enclose a leaflet with information and directions to the centre, which I hope you will find helpful. If you have any queries, please do not hesitate to get in touch\n\nYours\n\nBob Smith.",
      "date": "2009-11-30",
-     "updated": "2009-11-30",
+     "updated": "2009-11-30"
     },
     {
      "id":    "12345678901236",
@@ -28,5 +22,4 @@
      "date":  "2014-09-11",
      "file":  "files/child.jpg"
     }
-
 ]
