@@ -11,7 +11,7 @@
 	<div class="container">
 	  <h1>Patient Timeline</h1>
 
-      <p>Browse by date for current patient, :</p>
+      <p>Browse by date for current patient:</p>
 
 		<div id="timelineContainer" class="timelineContainer">
 			<div class="timelineToggle"><p><a class="expandAll">+ expand all</a></p></div>
@@ -43,7 +43,7 @@
                          $('#timelineContainer').append("<dl class='timelineMinor'>"+
                                                         "<dt id='"+elementObj['id']+"'><a>"+elementObj['title']+"</a></dt>" +
                                                         "<dd class='timelineEvent' id='"+elementObj['id']+"EX' style='display:none;'>"+
-                                                        "<h3>"+elementObj['title']+"</h3>"+
+                                                       // "<h3>"+elementObj['title']+"</h3>"+
                                                         "<p>"+elementObj['desc']+"</p>"+
                                                         "<p>"+elementObj['text']+"</p>"+
                                                         "<p><a href='"+elementObj['file']+"'>Associated File</a></p>"+
