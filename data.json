@@ -27,6 +27,20 @@
      "desc":  "A photo of a child",
      "date":  "2014-09-11",
      "file":  "files/child.jpg"
+    },
+    {
+     "id": "12345678901237",
+     "title": "cris.pdf",
+     "desc": "The South London and Maudsley NHS Foundation Trust Biomedical Research Centre (SLAM BRC) case register: development and descriptive data",
+     "file": "files/cris.pdf",
+     "date": "2009-08-12"
+    },
+    {
+      "id": "12345678901238",
+      "title": "cris_deident.pdf",
+      "desc": "Development and evaluation of a de-identification procedure for a case register sourced from mental health electronic records.",
+       "file": "files/cris_deident.pdf",
+       "date": "2013-07-13"
     }
 
 ]
