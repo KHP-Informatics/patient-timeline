@@ -53,6 +53,12 @@
                      fileLink = '';
                    }
 
+                   var media = '';
+                   if (/^.*\.(jpg|gif|png)$/.test(elementObj['file'])) {
+                      media = "<div class='media'>"+
+                     "<img src='"+elementObj['file']+"' width='240'/></div>"
+                   }
+
                    var updateText = "<p><br/><small>Updated: " + elementObj['updated'] + "</small></p>";
                    if (typeof elementObj['updated'] == "undefined") {
                      updateText = '';
@@ -63,7 +69,7 @@
                                                   "<dt id='" + elementObj['id'] + "'><a>" + elementObj['title'] + "</a></dt>" +
                                                   "<dd class='timelineEvent' id='" + elementObj['id'] + "EX' style='display:none;'>" +
                                                     // "<h3>"+elementObj['title']+"</h3>"+
-                                                  "<p>" + elementObj['desc'] + "</p>" +
+                                                  media +"<p>" + elementObj['desc'] + "</p>" +
                                                   "<p>" + textField + "</p>" +
                                                   fileLink +
                                                   updateText +
