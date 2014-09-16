@@ -42,6 +42,9 @@ def reindex(data=database, key='patient_id', primary_key=True):
 
     return indexed
 
+def sort_by_value():
+    pass
+
 class PatientRecords(restful.Resource):
     def get(self):
         """
@@ -64,7 +67,7 @@ class PatientID(restful.Resource):
             if int(record['patient_id']) == patient_id:
                 response.append(record)
 
-        return reindex(response, 'date', False)
+        return sorted(reindex(response, 'date', False), key=lambda x: x['date'])
 
 # API endpoints
 api.add_resource(PatientRecords, '/')
