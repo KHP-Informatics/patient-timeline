@@ -23,14 +23,14 @@
         "title": "child.jpg",
         "desc": "A photo of a child\n\nOur Ref: AB/12345.1 23 December 2004 Mr Jones Some Road Somewhere Dear Mr Someone - I understand from Mr Jones of Some School, that you have concerns regarding Herman I would like to offer you an appointment on Friday 28th January 2005 at 9am For teh appointment it would be useful to meet all those family members living at home so that we can hear everyone's point of view. n attending this appointment if travelling by car please can you give yourselves extra time as parking is difficult around the local area If you are unable to attend clinic, on receipt of this letter, please contact us on the above telephone number.;;;;I enclose a leaflet with information and directions to the centre, which I hope you will find helpful. If you have any queries, please do not hesitate to get in touch Yours Bob Smith.",
         "date": "2014-09-11",
-        "file": "files/child.jpg"
+        "file": "static/files/child.jpg"
     },
     {
         "id": "12345678901237",
         "patient_id": 1,
         "title": "cris.pdf",
         "desc": "The South London and Maudsley NHS Foundation Trust Biomedical Research Centre (SLAM BRC) case register: development and descriptive data",
-        "file": "files/cris.pdf",
+        "file": "static/files/cris.pdf",
         "date": "2009-08-12"
     },
     {
@@ -38,7 +38,7 @@
         "patient_id": 1,
         "title": "cris_deident.pdf",
         "desc": "Development and evaluation of a de-identification procedure for a case register sourced from mental health electronic records.",
-        "file": "files/cris_deident.pdf",
+        "file": "static/files/cris_deident.pdf",
         "date": "2013-07-13"
     },
     {
